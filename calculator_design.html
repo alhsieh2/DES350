@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<style>
+		body{
+			font-family: Helvetica, Arial, sans-serif;
+			font:Helvetica;
+			margin-left:5%;
+		}
+
+		.number{
+			background-color:#FFF;
+			width:150px;
+			height:120px;
+			font-size: 120px;
+			text-align:right;
+			padding: 0 0 5% 0;
+			border-radius:0;
+			border-top:0;
+			border-left:0;
+			border-right:0;
+			border-bottom:solid red 2px;
+			
+		}
+		
+		.delete{
+			background-color:#FFF;
+			width:150px;
+			height:120px;
+			font-size: 100px;
+			text-align:right;
+			padding: 0 0 0 0;
+			border-radius:0;
+			border-top:0;
+			border-left:0;
+			border-right:0;
+			border-bottom:0;
+			
+		}
+		.operator{
+			background:#fff;
+			width:150px;
+			height:120px;
+			float:none;
+			font-size: 120px;
+			padding: 0;
+			margin-left: 150px;
+			text-align:right;
+			border-radius:0;
+			border-top:0;
+			border-left:0;
+			border-right:0;
+			border-bottom:solid red 2px;
+			
+			
+		}
+		
+		.operator2{
+			background:#fff;
+			width:150px;
+			height:120px;
+			float:right;
+			font-size:120px;
+			padding: 0px;
+			text-align:right;
+			border-radius:0;
+			border-top:0;
+			border-left:0;
+			border-right:0;
+			border-bottom:solid red 2px;
+			
+	
+		}
+		
+		#display{
+			background-color: #FFFFFF;
+			width:95%;
+			height:200px;
+			float:none;
+			font-size: 200px;
+			text-align:right;
+			border-radius:0;
+			border-top:0;
+			border-left:0;
+			border-right:0;
+			border-bottom: solid 15px red;
+			padding: 2px 0 0 0px;
+			margin: 0 0 0 0;
+		}
+		.inputRow{
+			width:90%;
+			height:10%;
+			float:left;
+			padding:0px;
+			margin:1%;
+			position:relative;
+			display:inline-block;
+			
+		}
+		
+	
+	</style>
+<title>Calculator</title>
+	
+</head>
+
+<body>
+	<form name = "calculator">
+		<div id = "myCalculator">
+		<div id="top_display">
+			<input type="text" name = "display" id="display" disabled>
+
+		</div>
+			
+			<div class = "inputRow">
+				<input type = "button" class = "number" value="1"
+		 onclick = "calculator.display.value +='1'"> 
+				<input type = "button" class = "number" value="2"
+		 onclick = "calculator.display.value +='2'"> 
+				<input type = "button" class = "number" value="3"
+		 onclick = "calculator.display.value +='3'"> 
+				<input type = "button" class = "operator" name = "add" value = "+"
+					   onclick = "calculator.display.value +='+'">
+			</div>
+			<div class = "inputRow">
+				<input type = "button" class = "number" value="4"
+		 onclick = "calculator.display.value +='4'"> 
+				<input type = "button" class = "number" value="5"
+		 onclick = "calculator.display.value +='5'"> 
+				<input type = "button" class = "number" value="6"
+		 onclick = "calculator.display.value +='6'"> 
+				<input type = "button" class = "operator" name = "add" value = "-"
+					   onclick = "calculator.display.value +='-'">
+				<input type = "button" class = "operator2" value = "AC"
+					   onclick="calculator.display.value = ' '">
+			</div>
+			<div class = "inputRow">
+				<input type = "button" class = "number" value="7"
+		 onclick = "calculator.display.value +='7'"> 
+				<input type = "button" class = "number" value="8"
+		 onclick = "calculator.display.value +='8'"> 
+				<input type = "button" class = "number" value="9"
+		 onclick = "calculator.display.value +='9'"> 
+				
+					<input type = "button" class = "operator" name = "add" value = "*"
+					   onclick = "calculator.display.value +='*'">
+					<input type = "button" class = "operator2" name = "equals" value = "="
+					   onclick = "calculator.display.value =eval(calculator.display.value)">
+			</div>
+			<div class = "inputRow">
+				<input type = "button" class = "number" value="0"
+		 onclick = "calculator.display.value +='0'"> 
+				<input type = "button" class = "number" value="."
+		 onclick = "calculator.display.value +='.'">  
+				<input type = "button" class = "delete">  
+				<input type = "button" class = "operator" name = "add" value = "/"
+					   onclick = "calculator.display.value +='/'">
+				
+				
+			</div>
+			
+		
+			</div>
+	</form>
+</body>
+</html>
